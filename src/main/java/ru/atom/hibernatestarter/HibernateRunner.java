@@ -1,24 +1,22 @@
 package ru.atom.hibernatestarter;
 
-import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
+import lombok.extern.slf4j.Slf4j;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy;
-import org.hibernate.cfg.Configuration;
-import ru.atom.hibernatestarter.dao.entity.Birthday;
-import ru.atom.hibernatestarter.dao.entity.Role;
 import ru.atom.hibernatestarter.dao.entity.User;
 import ru.atom.hibernatestarter.util.HibernateUtil;
 
-import java.time.LocalDate;
-
+@Slf4j
 public class HibernateRunner {
+
     public static void main(String[] args) {
         User user = User.builder()
-                .username("lol")
+                .username("lol1")
                 .lastname("kek")
                 .firstname("heh")
                 .build();
+        log.info("User {} is int transient state", user.getUsername());
+
         try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory()) {
             try (Session session1 = sessionFactory.openSession()) {
                 session1.beginTransaction();
