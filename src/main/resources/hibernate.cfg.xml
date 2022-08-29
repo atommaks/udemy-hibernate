@@ -13,6 +13,7 @@
         <property name="format_sql">true</property>
 
         <mapping class="ru.atom.hibernatestarter.dao.entity.User"/>
+        <mapping class="ru.atom.hibernatestarter.dao.entity.Artist"/>
 
     </session-factory>
 </hibernate-configuration>
