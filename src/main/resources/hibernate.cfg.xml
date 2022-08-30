@@ -14,6 +14,8 @@
 
         <mapping class="ru.atom.hibernatestarter.dao.entity.User"/>
         <mapping class="ru.atom.hibernatestarter.dao.entity.Artist"/>
+        <mapping class="ru.atom.hibernatestarter.dao.entity.Company"/>
+        <mapping class="ru.atom.hibernatestarter.dao.entity.Profile"/>
 
     </session-factory>
 </hibernate-configuration>

@@ -14,6 +14,9 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Table(name = "users")
@@ -35,4 +38,9 @@ public class User {
     private Role role;
     @Type(type = "jsonb")
     private String info;
+    @ManyToOne
+    @JoinColumn(name = "company_id")
+    private Company company;
+    @OneToOne(mappedBy = "profile")
+    private Profile profile;
 }
