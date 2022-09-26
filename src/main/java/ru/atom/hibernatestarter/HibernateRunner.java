@@ -3,14 +3,10 @@ package ru.atom.hibernatestarter;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import ru.atom.hibernatestarter.dao.entity.Artist;
-import ru.atom.hibernatestarter.dao.entity.ArtistInfo;
 import ru.atom.hibernatestarter.dao.entity.Company;
 import ru.atom.hibernatestarter.dao.entity.PersonalInfo;
 import ru.atom.hibernatestarter.dao.entity.User;
 import ru.atom.hibernatestarter.util.HibernateUtil;
-
-import java.util.Optional;
 
 @Slf4j
 public class HibernateRunner {

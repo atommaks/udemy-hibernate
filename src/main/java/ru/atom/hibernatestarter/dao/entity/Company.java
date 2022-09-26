@@ -28,11 +28,8 @@ import java.util.Set;
 @Builder
 @ToString(exclude = "users")
 @EqualsAndHashCode(exclude = "users")
-public class Company {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(unique = true)
+public class Company extends BaseEntity<Long>{
+
     private String name;
     @Builder.Default
     @OneToMany(mappedBy = "company", cascade = CascadeType.ALL )
